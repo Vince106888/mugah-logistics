@@ -12,6 +12,7 @@
     "lint": "eslint . --ext .js,.jsx,.ts,.tsx",
     "typecheck": "tsc --noEmit -p tsconfig.json && tsc --noEmit -p tsconfig.node.json",
     "check": "npm run lint && npm run build",
+    "payment-link": "node scripts/create-payment-link.mjs",
     "preview": "vite preview"
   },
   "dependencies": {
