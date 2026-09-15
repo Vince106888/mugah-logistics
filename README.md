@@ -34,6 +34,29 @@ M-Pesa payment links use manual **Send Money** instructions for `0716 376 584`. 
 npm run payment-link -- 50000 MGH-2501 "Toyota Harrier reservation"
 ```
 
+Run `npm run payment-link` without arguments to print a reusable placeholder URL:
+
+```text
+https://mugahlogistics.co.ke/pay?amount=AMOUNT_KES&ref=REFERENCE&for=VEHICLE_OR_BOOKING
+```
+
+The branded checkout contains M-Pesa STK Push, card and bank-transfer states. Connect it to server-side payment routes using `VITE_MPESA_STK_ENDPOINT` and `VITE_CARD_SESSION_ENDPOINT`. Both routes receive the same JSON payload:
+
+```json
+{
+  "amount": 50000,
+  "reference": "MGH-2501",
+  "description": "Toyota Harrier reservation",
+  "customer": {
+    "name": "Customer name",
+    "phone": "0712345678",
+    "email": "customer@example.com"
+  }
+}
+```
+
+The STK endpoint should return `{ "message": "Check your phone to complete payment." }`. The card-session endpoint should return `{ "checkoutUrl": "https://..." }`. Store Daraja, bank-acquirer and signing credentials only on the server; never expose them through `VITE_` variables.
+
 The generated URL opens `/pay`, displays the fixed recipient number, and lets the customer return their 10-character transaction code through WhatsApp. The team must verify that code against the recipient's M-Pesa statement before marking a deal paid. The website never asks for an M-Pesa PIN and cannot initiate or automatically confirm a transfer.
 
 Automated STK Push requires a Safaricom Business Shortcode or Till, a Daraja consumer key and secret, an LNM passkey, and a public callback endpoint. A normal mobile number cannot use Daraja's STK Push API.

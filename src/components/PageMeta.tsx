@@ -28,7 +28,7 @@ const pageMeta: Record<string, { title: string; description: string }> = {
   '/contact': {
     title: 'Contact Mugah Logistics | Nairobi Showroom & Yard',
     description:
-      'Contact Mugah Logistics for vehicle sales, hire, trade-ins, financing or imports. Visit Kilimani or our Mombasa Road yard.'
+      'Contact Mugah Logistics for vehicle sales, hire, trade-ins, financing or imports at Roysambu, Thika Road, Nairobi.'
   },
   '/privacy': {
     title: 'Privacy Notice | Mugah Logistics',
@@ -39,8 +39,8 @@ const pageMeta: Record<string, { title: string; description: string }> = {
     description: 'Request a verified M-Pesa, card or bank-transfer payment link for a Mugah Logistics vehicle or hire booking.'
   },
   '/pay': {
-    title: 'M-Pesa Payment | Mugah Logistics',
-    description: 'Complete an agreed Mugah Logistics payment using M-Pesa Send Money and submit the transaction code for verification.'
+    title: 'Secure Payment | Mugah Logistics',
+    description: 'Complete an agreed Mugah Logistics payment using M-Pesa, card or bank transfer.'
   }
 };
 

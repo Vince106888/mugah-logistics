@@ -21,10 +21,10 @@ const methods = [
   {
     icon: CreditCardIcon,
     name: 'Debit or credit card',
-    status: 'Secure link on request',
-    detail: 'Ask for a hosted card checkout link for Visa or Mastercard. Never send your card number, expiry date or CVV in a message.',
-    action: 'Request card link',
-    message: 'Hello Mugah Logistics, please send me a secure hosted card payment link for my booking or vehicle deposit.'
+    status: 'Checkout integration ready',
+    detail: 'The Mugah payment link can start Visa or Mastercard checkout through the connected acquiring bank. Never send card details in a message.',
+    action: 'Request payment link',
+    message: 'Hello Mugah Logistics, please send me a card-enabled payment link for my booking or vehicle deposit.'
   },
   {
     icon: LandmarkIcon,
@@ -92,7 +92,7 @@ export function Payments() {
             {[
               'Choose a vehicle or hire date and confirm availability with the team.',
               'Receive a link or invoice showing the agreed amount, vehicle and unique reference.',
-              'Pay through M-Pesa, the hosted card provider or your bank, then keep the confirmation.'
+              'Pay through M-Pesa, the connected card service or your bank, then keep the confirmation.'
             ].map((step, index) => (
               <li key={step} className="flex gap-4 text-sm leading-relaxed text-ink-600">
                 <span className="flex h-7 w-7 shrink-0 items-center justify-center rounded-full bg-ink text-xs font-bold text-bone">{index + 1}</span>

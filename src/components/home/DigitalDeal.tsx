@@ -18,8 +18,8 @@ const capabilities = [
   },
   {
     icon: CreditCardIcon,
-    title: 'Secure card links on request',
-    body: 'For Visa or Mastercard, the team sends a hosted checkout link. Card details are never collected by this website or through chat.'
+    title: 'Card checkout on the same link',
+    body: 'The checkout is ready to hand Visa or Mastercard details to your connected acquiring bank. Mugah never stores card numbers or CVVs.'
   },
   {
     icon: LandmarkIcon,
@@ -39,7 +39,7 @@ export function DigitalDeal() {
               Pay from wherever you are.
             </h2>
             <p className="mt-5 max-w-xl text-base leading-relaxed text-bone/70">
-              Once availability and price are confirmed, we send a payment link or invoice tied to your vehicle and reference. Choose M-Pesa, a hosted card checkout or bank transfer.
+              Once availability and price are confirmed, we send a Mugah payment link tied to your vehicle and reference. Choose M-Pesa, card or bank transfer.
             </p>
 
             <ol className="mt-10 divide-y divide-white/10 border-y border-white/10">
@@ -73,7 +73,7 @@ export function DigitalDeal() {
             <div className="mt-6 space-y-3">
               {[
                 { icon: SmartphoneIcon, label: 'M-Pesa Send Money', note: company.mpesa, active: true },
-                { icon: CreditCardIcon, label: 'Visa or Mastercard', note: 'Hosted link on request', active: false },
+                { icon: CreditCardIcon, label: 'Visa or Mastercard', note: 'Acquirer connection ready', active: false },
                 { icon: LandmarkIcon, label: 'Bank transfer', note: 'Verified invoice', active: false }
               ].map((method) => (
                 <div key={method.label} className={`flex items-center gap-4 rounded-xl border p-4 ${method.active ? 'border-forest bg-forest-pale' : 'border-bone-line bg-white'}`}>

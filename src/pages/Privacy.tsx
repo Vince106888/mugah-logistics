@@ -23,9 +23,9 @@ export function Privacy() {
           </p>
         </section>
         <section>
-          <h2 className="text-lg font-semibold text-ink">M-Pesa payment confirmations</h2>
+          <h2 className="text-lg font-semibold text-ink">Payment links and confirmations</h2>
           <p className="mt-2">
-            A payment link only displays the agreed Send Money number, amount and reference. The transfer happens inside M-Pesa. If you enter a transaction code, it is placed into a WhatsApp message that you review and send yourself so the team can verify the transfer against the recipient's statement.
+            A payment link displays the agreed amount and reference. M-Pesa STK and card buttons connect only after the relevant secure server integration is configured. Manual M-Pesa confirmations are placed into a WhatsApp message that you review and send yourself so the team can verify the transfer against the recipient's statement.
           </p>
         </section>
         <section>
