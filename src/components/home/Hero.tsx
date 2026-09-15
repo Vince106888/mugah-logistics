@@ -32,7 +32,7 @@ const budgets = [
 
 const bodies = ['Any body type', 'SUV', 'Sedan', 'Hatchback', 'Station Wagon', 'Van'];
 
-const pickups = ['JKIA — Airport', 'Wilson Airport', 'Kilimani showroom', 'Your hotel or office'];
+const pickups = ['JKIA — Airport', 'Wilson Airport', 'Roysambu — Thika Road', 'Your hotel or office'];
 
 export function Hero() {
   const { mode } = useMode();
@@ -42,8 +42,8 @@ export function Hero() {
   const [budget, setBudget] = useState('');
   const [body, setBody] = useState(bodies[0]);
   const [pickup, setPickup] = useState(pickups[0]);
-  const [from, setFrom] = useState('');
-  const [to, setTo] = useState('');
+  const [from, setFrom] = useState(dateInputValue());
+  const [to, setTo] = useState(nextDateInputValue(dateInputValue()));
 
   const handleSubmit = (event: React.FormEvent) => {
     event.preventDefault();
@@ -79,7 +79,7 @@ export function Hero() {
         <div className="max-w-2xl">
           <p className="flex items-center gap-2 text-xs font-medium text-bone/60">
             <MapPinIcon className="h-3.5 w-3.5 text-amber-bright" aria-hidden="true" />
-            Kilimani showroom &amp; Mombasa Road yard, Nairobi
+            Roysambu · Thika Road, Nairobi
           </p>
 
           <motion.h1
@@ -118,7 +118,7 @@ export function Hero() {
           {mode === 'buy' ?
           <div className="grid gap-3 sm:grid-cols-[1fr_1fr_auto]">
               <label className="block">
-                <span className="sr-only">Budget</span>
+                <span className="mb-1.5 block text-xs font-semibold text-ink-600">Budget</span>
                 <select
                 value={budget}
                 onChange={(event) => setBudget(event.target.value)}
@@ -132,7 +132,7 @@ export function Hero() {
                 </select>
               </label>
               <label className="block">
-                <span className="sr-only">Body type</span>
+                <span className="mb-1.5 block text-xs font-semibold text-ink-600">Body type</span>
                 <select
                 value={body}
                 onChange={(event) => setBody(event.target.value)}
@@ -154,7 +154,7 @@ export function Hero() {
 
           <div className="grid gap-3 sm:grid-cols-2 lg:grid-cols-[1.4fr_1fr_1fr_auto]">
               <label className="block">
-                <span className="sr-only">Pickup point</span>
+                <span className="mb-1.5 block text-xs font-semibold text-ink-600">Pickup point</span>
                 <select
                 value={pickup}
                 onChange={(event) => setPickup(event.target.value)}
@@ -166,18 +166,22 @@ export function Hero() {
                 </select>
               </label>
               <label className="block">
-                <span className="sr-only">Pickup date</span>
+                <span className="mb-1.5 block text-xs font-semibold text-ink-600">From</span>
                 <input
                 type="date"
                 value={from}
                 min={dateInputValue()}
                 required
-                onChange={(event) => setFrom(event.target.value)}
+                onChange={(event) => {
+                  const nextFrom = event.target.value;
+                  setFrom(nextFrom);
+                  if (!to || to <= nextFrom) setTo(nextDateInputValue(nextFrom));
+                }}
                 className="h-12 w-full rounded-lg border border-bone-line bg-white px-3 text-sm text-ink focus:border-forest focus:outline-none" />
               
               </label>
               <label className="block">
-                <span className="sr-only">Return date</span>
+                <span className="mb-1.5 block text-xs font-semibold text-ink-600">To</span>
                 <input
                 type="date"
                 value={to}

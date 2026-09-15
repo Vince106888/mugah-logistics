@@ -253,7 +253,7 @@ export const deals: Deal[] = [
   },
   hire: null,
   activity: [
-  { id: 'g1', at: hoursAgo(220), label: 'Walk-in viewing at the Kilimani showroom', actor: 'Grace Njeri', channel: 'in-person' },
+  { id: 'g1', at: hoursAgo(220), label: 'Walk-in viewing at the Roysambu showroom', actor: 'Grace Njeri', channel: 'in-person' },
   { id: 'g2', at: hoursAgo(120), label: 'Sale agreement signed electronically', actor: 'Faith Chemutai', channel: 'system' },
   { id: 'g3', at: hoursAgo(96), label: 'Balance cleared by bank transfer', actor: 'Payments', channel: 'system' },
   { id: 'g4', at: hoursAgo(70), label: 'NTSA transfer completed, keys handed over', actor: 'Grace Njeri', channel: 'in-person' }],

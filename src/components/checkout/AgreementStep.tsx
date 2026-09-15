@@ -39,7 +39,7 @@ export function AgreementStep({
   'The 121-point inspection report attached to this agreement forms part of the sale. Any defect disclosed there is accepted by the buyer.',
   'Transfer of ownership is lodged with NTSA by Mugah Logistics within two working days of full settlement.',
   'The balance is payable in cash, by bank transfer, or through an approved asset finance facility before release of the vehicle.',
-  'The first service at 1,000 km is provided free of charge at the Mombasa Road workshop.'];
+  'The first service at 1,000 km is provided free of charge at our Roysambu, Thika Road workshop.'];
 
 
   return (

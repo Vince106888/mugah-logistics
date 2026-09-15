@@ -57,39 +57,22 @@ export function Contact() {
               Come and see the cars.
             </h1>
             <p className="mt-6 max-w-xl text-base leading-relaxed text-ink-600 lg:text-lg">
-              Walk into either site during opening hours — no appointment needed, and you are welcome
+              Walk into our Roysambu location during opening hours — no appointment needed, and you are welcome
               to bring your own mechanic. Or send a note and we will call you back.
             </p>
 
-            <div className="mt-12 grid gap-8 sm:grid-cols-2">
+            <div className="mt-12 max-w-xl">
               <div className="border-t-2 border-ink pt-5">
-                <h2 className="text-lg font-semibold text-ink">Kilimani showroom</h2>
+                <h2 className="text-lg font-semibold text-ink">Roysambu showroom &amp; yard</h2>
                 <p className="mt-2 flex gap-2.5 text-sm leading-relaxed text-ink-600">
                   <MapPinIcon className="mt-0.5 h-4 w-4 shrink-0 text-forest-mid" aria-hidden="true" />
                   {company.showroom}
                 </p>
                 <p className="mt-2 text-sm text-ink-600">
-                  Executive stock, financing desk and test drives.
+                  Vehicle sales, hire collection, inspections, financing support and test drives.
                 </p>
                 <a
                   href={`https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(company.showroom)}`}
-                  target="_blank"
-                  rel="noreferrer"
-                  className="mt-3 inline-flex text-sm font-semibold text-forest underline underline-offset-4">
-                  Open in Maps
-                </a>
-              </div>
-              <div className="border-t-2 border-ink pt-5">
-                <h2 className="text-lg font-semibold text-ink">Mombasa Road yard</h2>
-                <p className="mt-2 flex gap-2.5 text-sm leading-relaxed text-ink-600">
-                  <MapPinIcon className="mt-0.5 h-4 w-4 shrink-0 text-forest-mid" aria-hidden="true" />
-                  {company.yard}
-                </p>
-                <p className="mt-2 text-sm text-ink-600">
-                  Workshop, inspections, 4WD stock and the hire fleet.
-                </p>
-                <a
-                  href={`https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(company.yard)}`}
                   target="_blank"
                   rel="noreferrer"
                   className="mt-3 inline-flex text-sm font-semibold text-forest underline underline-offset-4">

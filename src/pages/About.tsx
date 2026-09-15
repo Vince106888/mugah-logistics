@@ -11,8 +11,8 @@ const timeline = [
 },
 {
   year: '2017',
-  title: 'The Mombasa Road yard',
-  body: 'We take a permanent yard and hire Peter to run a workshop, so every unit is inspected and serviced before it is listed.'
+  title: 'A permanent workshop',
+  body: 'We establish a permanent workshop so every unit is inspected and serviced before it is listed.'
 },
 {
   year: '2020',
@@ -21,8 +21,8 @@ const timeline = [
 },
 {
   year: '2024',
-  title: 'Kilimani showroom',
-  body: 'An indoor showroom at Chaka Place for executive stock, with financing handled on site by Grace and her bank partners.'
+  title: 'Roysambu, Thika Road',
+  body: 'Sales, hire operations and the workshop come together at our Roysambu location, with financing support handled on site.'
 }];
 
 
@@ -51,8 +51,8 @@ export function About() {
             A family car business that grew on referrals.
           </h1>
           <p className="mt-6 text-base leading-relaxed text-ink-600 lg:text-lg">
-            {company.name} sells inspected vehicles and runs a tracked hire fleet from two sites in
-            Nairobi. Fourteen staff, one workshop, and 1,400 cars delivered to people who mostly
+            {company.name} sells inspected vehicles and runs a tracked hire fleet from Roysambu on
+            Thika Road. Fourteen staff, one workshop, and 1,400 cars delivered to people who mostly
             heard about us from someone they trust.
           </p>
         </div>
@@ -60,7 +60,7 @@ export function About() {
         <div className="mt-12 overflow-hidden rounded-2xl">
           <img
             src={SHOWROOM_IMAGE}
-            alt="The Mugah Logistics showroom at Chaka Place, Kilimani"
+            alt="The Mugah Logistics showroom in Roysambu, Nairobi"
             className="aspect-[21/9] w-full object-cover" />
           
         </div>

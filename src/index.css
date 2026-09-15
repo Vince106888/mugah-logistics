@@ -35,6 +35,20 @@ textarea {
 button:disabled {
   cursor: not-allowed;
 }
+input[type='date'] {
+  color-scheme: light;
+  min-width: 0;
+}
+input[type='date']::-webkit-datetime-edit,
+input[type='date']::-webkit-date-and-time-value {
+  color: #0d1411;
+  opacity: 1;
+  text-align: left;
+}
+input[type='date']::-webkit-calendar-picker-indicator {
+  cursor: pointer;
+  opacity: 0.75;
+}
 img {
   background-color: #efeae1;
 }

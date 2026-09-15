@@ -9,7 +9,7 @@ import { emailUrl, whatsappUrl } from '../../utils/contact';
 const pickups = [
 { value: 'JKIA — Airport', fee: 2000 },
 { value: 'Wilson Airport', fee: 1500 },
-{ value: 'Kilimani showroom', fee: 0 },
+{ value: 'Roysambu — Thika Road', fee: 0 },
 { value: 'Your hotel or office', fee: 1000 }];
 
 
@@ -25,8 +25,8 @@ export function BookingFlow() {
   const [pickup, setPickup] = useState(
     pickups.find((option) => option.value === params.get('pickup'))?.value ?? pickups[0].value
   );
-  const [from, setFrom] = useState(params.get('from') ?? '');
-  const [to, setTo] = useState(params.get('to') ?? '');
+  const [from, setFrom] = useState(params.get('from') || dateInputValue());
+  const [to, setTo] = useState(params.get('to') || nextDateInputValue(params.get('from') || dateInputValue()));
   const [withDriver, setWithDriver] = useState(false);
   const [vehicleId, setVehicleId] = useState(hireFleet[0].id);
   const [name, setName] = useState('');
@@ -205,7 +205,11 @@ export function BookingFlow() {
                     value={from}
                     min={dateInputValue()}
                     required
-                    onChange={(event) => setFrom(event.target.value)}
+                    onChange={(event) => {
+                      const nextFrom = event.target.value;
+                      setFrom(nextFrom);
+                      if (!to || to <= nextFrom) setTo(nextDateInputValue(nextFrom));
+                    }}
                     className="h-11 w-full rounded-lg border border-bone-line bg-bone px-3 text-sm text-ink focus:border-forest focus:outline-none" />
                   
                   </label>

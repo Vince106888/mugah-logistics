@@ -44,7 +44,7 @@ export const vehicles: Vehicle[] = [
   mileageKm: 68400,
   colour: 'Silver Metallic',
   condition: 'Foreign Used',
-  yard: 'Mombasa Road Yard',
+  yard: 'Roysambu, Thika Road',
   image: IMG.prado,
   features: [
   'Full leather interior',
@@ -77,7 +77,7 @@ export const vehicles: Vehicle[] = [
   mileageKm: 41200,
   colour: 'Pearl White',
   condition: 'Foreign Used',
-  yard: 'Kilimani Showroom',
+  yard: 'Roysambu, Thika Road',
   image: IMG.harrier,
   features: [
   'Panoramic roof',
@@ -110,7 +110,7 @@ export const vehicles: Vehicle[] = [
   mileageKm: 57800,
   colour: 'Obsidian Black',
   condition: 'Locally Used',
-  yard: 'Kilimani Showroom',
+  yard: 'Roysambu, Thika Road',
   image: IMG.mercedes,
   features: [
   'Burmester sound',
@@ -143,7 +143,7 @@ export const vehicles: Vehicle[] = [
   mileageKm: 92500,
   colour: 'Deep Sea Blue',
   condition: 'Locally Used',
-  yard: 'Mombasa Road Yard',
+  yard: 'Roysambu, Thika Road',
   image: IMG.forester,
   features: [
   'Symmetrical AWD',
@@ -176,7 +176,7 @@ export const vehicles: Vehicle[] = [
   mileageKm: 118000,
   colour: 'Super White',
   condition: 'Locally Used',
-  yard: 'Mombasa Road Yard',
+  yard: 'Roysambu, Thika Road',
   image: IMG.landcruiser,
   features: [
   'Cool box',
@@ -209,7 +209,7 @@ export const vehicles: Vehicle[] = [
   mileageKm: 74300,
   colour: 'Soul Red',
   condition: 'Foreign Used',
-  yard: 'Kilimani Showroom',
+  yard: 'Roysambu, Thika Road',
   image: IMG.demio,
   features: [
   'Touchscreen infotainment',
@@ -242,7 +242,7 @@ export const vehicles: Vehicle[] = [
   mileageKm: 63900,
   colour: 'Silver',
   condition: 'Foreign Used',
-  yard: 'Kilimani Showroom',
+  yard: 'Roysambu, Thika Road',
   image: IMG.axio,
   features: [
   'Hybrid battery health report',
@@ -275,7 +275,7 @@ export const vehicles: Vehicle[] = [
   mileageKm: 88200,
   colour: 'Super White',
   condition: 'Locally Used',
-  yard: 'Mombasa Road Yard',
+  yard: 'Roysambu, Thika Road',
   image: IMG.hiace,
   features: [
   'PSV licensed',

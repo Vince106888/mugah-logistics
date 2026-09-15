@@ -5,8 +5,8 @@ export const company = {
   whatsapp: '+254 716 376 584',
   mpesa: '0716 376 584',
   email: 'hello@mugahlogistics.co.ke',
-  showroom: 'Chaka Place, Argwings Kodhek Road, Kilimani, Nairobi',
-  yard: 'Mombasa Road, opposite Cabanas, Nairobi',
+  showroom: 'Roysambu, Thika Road, Nairobi',
+  yard: 'Roysambu, Thika Road, Nairobi',
   hours: [
   { days: 'Monday – Friday', time: '8:00am – 6:30pm' },
   { days: 'Saturday', time: '9:00am – 5:00pm' },
@@ -24,7 +24,7 @@ export const stats = [
 export const buyPromises = [
 {
   title: 'Inspected before it is listed',
-  body: 'Every unit goes through a 121-point mechanical and body check at our Mombasa Road yard. You get the written report, including what we fixed.'
+  body: 'Every unit goes through a 121-point mechanical and body check at our Roysambu, Thika Road location. You get the written report, including what we fixed.'
 },
 {
   title: 'Real, verifiable paperwork',
@@ -94,7 +94,7 @@ export const steps = {
   },
   {
     title: 'Come and drive it',
-    body: 'Test drive at Kilimani or the Mombasa Road yard. Bring your own mechanic; we will hand them the inspection report.'
+    body: 'Test drive at our Roysambu, Thika Road location. Bring your own mechanic; we will hand them the inspection report.'
   },
   {
     title: 'Pay or finance',
@@ -195,5 +195,5 @@ export const faqs = [
 },
 {
   q: 'Do you buy cars from the public?',
-  a: 'We do. Bring it to Mombasa Road for a same-day valuation — we either buy it outright or sell it on consignment for a 4% commission.'
+  a: 'We do. Bring it to Roysambu, Thika Road for a same-day valuation — we either buy it outright or sell it on consignment for a 4% commission.'
 }];
