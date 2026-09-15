@@ -8,6 +8,7 @@ import { siteConfig } from '../config';
 const links = [
 { to: '/inventory', label: 'Inventory' },
 { to: '/hire', label: 'Hire & booking' },
+{ to: '/payments', label: 'Payments' },
 { to: '/about', label: 'About us' },
 { to: '/contact', label: 'Contact' }];
 
@@ -48,7 +49,7 @@ export function Header() {
           </span>
         </Link>
 
-        <nav className="ml-auto hidden items-center gap-8 lg:flex" aria-label="Main">
+        <nav className="ml-auto hidden items-center gap-6 lg:flex" aria-label="Main">
           {links.map((link) =>
           <NavLink
             key={link.to}

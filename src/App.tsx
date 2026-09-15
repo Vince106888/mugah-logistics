@@ -15,6 +15,7 @@ import { Checkout } from './pages/Checkout';
 import { Privacy } from './pages/Privacy';
 import { NotFound } from './pages/NotFound';
 import { Pay } from './pages/Pay';
+import { Payments } from './pages/Payments';
 import { PageMeta } from './components/PageMeta';
 import { siteConfig } from './config';
 import { useMode } from './contexts/ModeContext';
@@ -51,6 +52,7 @@ export function App({ initialMode = 'buy' }: AppProps) {
               <Route path="/about" element={<About />} />
               <Route path="/contact" element={<Contact />} />
               <Route path="/privacy" element={<Privacy />} />
+              <Route path="/payments" element={<Payments />} />
               <Route path="/pay" element={<Pay />} />
               {siteConfig.demoFeaturesEnabled && <Route path="/deals" element={<Deals />} />}
               {siteConfig.demoFeaturesEnabled && <Route path="/deals/:id" element={<DealDetail />} />}

@@ -26,6 +26,7 @@ export function Footer() {
               {[
               { to: '/inventory', label: 'Browse inventory' },
               { to: '/hire', label: 'Book a hire' },
+              { to: '/payments', label: 'Payment options' },
               { to: '/about', label: 'About us' },
               { to: '/contact', label: 'Contact & financing' }].
               map((item) =>

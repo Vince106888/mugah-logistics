@@ -26,7 +26,7 @@ The static output is written to `dist/`. Deploy that directory to any static hos
 
 ## Enquiries and payments
 
-The public build sends prepared enquiries through WhatsApp or the visitor's email client, so it works without a server while keeping submission explicit.
+The public build sends prepared enquiries through WhatsApp or the visitor's email client, so it works without a server while keeping submission explicit. The `/payments` page publicly lists M-Pesa, hosted card-link and invoiced bank-transfer options.
 
 M-Pesa payment links use manual **Send Money** instructions for `0716 376 584`. Generate a link with an agreed amount, reference and description:
 

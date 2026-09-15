@@ -34,6 +34,10 @@ const pageMeta: Record<string, { title: string; description: string }> = {
     title: 'Privacy Notice | Mugah Logistics',
     description: 'How Mugah Logistics handles enquiries and personal information submitted through this website.'
   },
+  '/payments': {
+    title: 'Payment Options | Mugah Logistics',
+    description: 'Request a verified M-Pesa, card or bank-transfer payment link for a Mugah Logistics vehicle or hire booking.'
+  },
   '/pay': {
     title: 'M-Pesa Payment | Mugah Logistics',
     description: 'Complete an agreed Mugah Logistics payment using M-Pesa Send Money and submit the transaction code for verification.'

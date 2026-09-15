@@ -229,19 +229,22 @@ export function VehicleDetail() {
               </Link>
             </div> : <div className="mt-5 rounded-xl bg-ink px-4 py-4 text-bone">
               <p className="text-[11px] font-semibold uppercase tracking-[0.18em] text-amber-bright">
-                Reserve with a real person
+                Reserve and choose how to pay
               </p>
               <p className="mt-2 text-sm leading-relaxed text-bone/70">
-                Send the vehicle reference on WhatsApp. We confirm availability, viewing times and payment instructions directly.
+                We confirm availability, then send a verified M-Pesa, card or bank-transfer payment link for this vehicle.
               </p>
               <a
-                href={whatsappUrl(`Hello Mugah Logistics, is the ${vehicle.year} ${vehicle.make} ${vehicle.model} (${vehicle.id.toUpperCase()}) available?`)}
+                href={whatsappUrl(`Hello Mugah Logistics, is the ${vehicle.year} ${vehicle.make} ${vehicle.model} (${vehicle.id.toUpperCase()}) available? Please send me the payment options.`)}
                 target="_blank"
                 rel="noreferrer"
                 className="mt-4 flex items-center justify-center gap-2 rounded-lg bg-amber-bright py-3 text-sm font-semibold text-ink transition-colors duration-150 ease-swift hover:bg-amber">
                 <MessageCircleIcon className="h-4 w-4" aria-hidden="true" />
-                Ask on WhatsApp
+                Request payment link
               </a>
+              <Link to="/payments" className="mt-3 flex justify-center text-xs font-semibold text-bone/70 underline underline-offset-4 hover:text-bone">
+                Compare payment options
+              </Link>
             </div>}
 
             {sent ?
