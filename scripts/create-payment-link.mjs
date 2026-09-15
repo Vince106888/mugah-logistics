@@ -1,21 +1,31 @@
 const options = {};
-for (let index = 2; index < process.argv.length; index += 2) {
-  const key = process.argv[index]?.replace(/^--/, '');
-  const value = process.argv[index + 1];
+const positional = [];
+const args = process.argv.slice(2);
+
+for (let index = 0; index < args.length; index += 1) {
+  const argument = args[index];
+  if (!argument.startsWith('--')) {
+    positional.push(argument);
+    continue;
+  }
+
+  const [key, inlineValue] = argument.slice(2).split('=', 2);
+  const value = inlineValue ?? args[index + 1];
   if (key && value) options[key] = value;
+  if (inlineValue === undefined && value) index += 1;
 }
 
-const amount = Number(options.amount);
-const reference = String(options.ref ?? '').trim().toUpperCase();
-const item = String(options.item ?? '').trim();
-const base = String(options.base ?? 'https://mugahlogistics.co.ke').replace(/\/$/, '');
+const amount = Number(options.amount ?? positional[0]);
+const reference = String(options.ref ?? positional[1] ?? '').trim().toUpperCase();
+const item = String(options.item ?? positional[2] ?? '').trim();
+const base = String(options.base ?? positional[3] ?? 'https://mugahlogistics.co.ke').replace(/\/$/, '');
 
 if (!Number.isInteger(amount) || amount <= 0 || amount > 100_000_000) {
-  console.error('Provide a whole-number KES amount: --amount 50000');
+  console.error('Usage: npm run payment-link -- 50000 MGH-2501 "Toyota Harrier reservation"');
   process.exit(1);
 }
 if (!/^[A-Z0-9-]{3,32}$/.test(reference)) {
-  console.error('Provide a 3-32 character reference using letters, numbers or hyphens: --ref MGH-2501');
+  console.error('Reference must contain 3-32 letters, numbers or hyphens.');
   process.exit(1);
 }
 

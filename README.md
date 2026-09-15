@@ -31,7 +31,7 @@ The public build sends prepared enquiries through WhatsApp or the visitor's emai
 M-Pesa payment links use manual **Send Money** instructions for `0716 376 584`. Generate a link with an agreed amount, reference and description:
 
 ```bash
-npm run payment-link -- --amount 50000 --ref MGH-2501 --item "Toyota Harrier reservation"
+npm run payment-link -- 50000 MGH-2501 "Toyota Harrier reservation"
 ```
 
 The generated URL opens `/pay`, displays the fixed recipient number, and lets the customer return their 10-character transaction code through WhatsApp. The team must verify that code against the recipient's M-Pesa statement before marking a deal paid. The website never asks for an M-Pesa PIN and cannot initiate or automatically confirm a transfer.
